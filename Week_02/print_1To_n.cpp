@@ -1,15 +1,14 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-void print(int n)
-{
-    if(n==0) return;
-    print (n-1);
-    cout << n << endl;
+int sum(int n) {
+    if (n == 1) return 1;        // base case
+    return n + sum(n - 1);       // recursive call
 }
 
-int main()
-{
-    print(10);
-    return 0;
+int main() {
+    int n;
+    cout << "Enter the value of n : " ;
+    cin >> n;
+    cout << "Sum of 1 to n : " << sum(n) << endl;
 }
